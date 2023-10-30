@@ -1,0 +1,25 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - master # Тут вкажіть гілку, на яку ви хочете обмежити автоматичний запуск
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.s18.2 # Тут вкажіть версію Node.js, в якій працює Cypress
+
+      - name: Install dependencies
+        run: npm install # Змініть на yarn, якщо використовуєте Yarn
+
+      - name: Run Cypress tests
+        run: npm run cypress:run # Змініть на yarn run cypress:run, якщо використовуєте Yarn
