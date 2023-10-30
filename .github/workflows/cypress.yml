@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 18.s18.2 # Тут вкажіть версію Node.js, в якій працює Cypress
+          node-version: 18.18.2 # Тут вкажіть версію Node.js, в якій працює Cypress
 
       - name: Install dependencies
         run: npm install # Змініть на yarn, якщо використовуєте Yarn
